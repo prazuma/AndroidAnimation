@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidAnimation</string>
+    <string name="button_value_animator">Value Animator</string>
+    <string name="button_go_property_animation">Property Animation</string>
+</resources>
