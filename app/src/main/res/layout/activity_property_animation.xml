@@ -21,6 +21,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_value_animator"
+        app:layout_constraintBottom_toTopOf="@id/property_animation_value_with_type_evaluator_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/property_animation_value_with_type_evaluator_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_value_animator_with_type_evaluator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
