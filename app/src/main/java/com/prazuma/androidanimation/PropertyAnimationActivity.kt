@@ -25,6 +25,10 @@ class PropertyAnimationActivity : AppCompatActivity() {
         property_animation_object_button.setOnClickListener {
             doObjectAnimation(property_animation_image)
         }
+
+        property_animation_object_with_type_evaluator.setOnClickListener {
+            doObjectAnimatorWithTypeEvaluator(property_animation_image)
+        }
     }
 
     private fun doValueAnimation(view: View) {
@@ -58,6 +62,22 @@ class PropertyAnimationActivity : AppCompatActivity() {
         // because the animated property updates automatically.
         ObjectAnimator.ofFloat(view, "translationX", 100f).apply {
             duration = 1000
+            start()
+        }
+    }
+
+    private fun doObjectAnimatorWithTypeEvaluator(view: View) {
+        ObjectAnimator.ofObject(
+                MyTypeEvaluator(),
+                Pair(0f, 0f),
+                Pair(100f, 100f)
+        ).apply {
+            duration = 1000
+            addUpdateListener { updatedAnimation ->
+                val pair = updatedAnimation.animatedValue as Pair<*, *>
+                view.translationX = pair.first as Float
+                view.translationY = pair.second as Float
+            }
             start()
         }
     }
