@@ -3,4 +3,5 @@
     <string name="button_value_animator">Value Animator</string>
     <string name="button_go_property_animation">Property Animation</string>
     <string name="button_value_animator_with_type_evaluator">Value Animator With Type Evaluator</string>
+    <string name="button_object_animator">Object Animator</string>
 </resources>

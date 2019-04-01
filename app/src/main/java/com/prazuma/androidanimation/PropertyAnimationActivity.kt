@@ -1,5 +1,6 @@
 package com.prazuma.androidanimation
 
+import android.animation.ObjectAnimator
 import android.animation.TypeEvaluator
 import android.animation.ValueAnimator
 import android.os.Bundle
@@ -19,6 +20,10 @@ class PropertyAnimationActivity : AppCompatActivity() {
 
         property_animation_value_with_type_evaluator_button.setOnClickListener {
             doValueAnimatorWithTypeEvaluator(property_animation_image)
+        }
+
+        property_animation_object_button.setOnClickListener {
+            doObjectAnimation(property_animation_image)
         }
     }
 
@@ -44,6 +49,15 @@ class PropertyAnimationActivity : AppCompatActivity() {
                 view.translationX = pair.first as Float
                 view.translationY = pair.second as Float
             }
+            start()
+        }
+    }
+
+    private fun doObjectAnimation(view: View) {
+        // ObjectAnimator is much easier than ValueAnimator,
+        // because the animated property updates automatically.
+        ObjectAnimator.ofFloat(view, "translationX", 100f).apply {
+            duration = 1000
             start()
         }
     }
