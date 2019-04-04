@@ -16,5 +16,9 @@ class MainActivity : AppCompatActivity() {
         main_property_animation_button.setOnClickListener {
             startActivity(Intent(this, PropertyAnimationActivity::class.java))
         }
+
+        main_layout_transition_button.setOnClickListener {
+            startActivity(Intent(this, LayoutTransitionActivity::class.java))
+        }
     }
 }

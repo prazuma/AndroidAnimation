@@ -6,4 +6,5 @@
     <string name="button_object_animator">Object Animator</string>
     <string name="button_object_animator_with_type_evaluator">Object Animator With Type Evaluator</string>
     <string name="button_multi_animations_using_animatorset">Multi Animations Using AnimatorSet</string>
+    <string name="button_change_visibility">CHANGE VISIBILITY</string>
 </resources>
