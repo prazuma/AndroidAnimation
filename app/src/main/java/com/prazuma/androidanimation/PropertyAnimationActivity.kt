@@ -1,9 +1,6 @@
 package com.prazuma.androidanimation
 
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
-import android.animation.TypeEvaluator
-import android.animation.ValueAnimator
+import android.animation.*
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -83,6 +80,36 @@ class PropertyAnimationActivity : AppCompatActivity() {
                 view.translationX = pair.first as Float
                 view.translationY = pair.second as Float
             }
+            start()
+        }
+    }
+
+    private fun doObjectAnimationWithAnimationListener(view: View){
+        ObjectAnimator.ofFloat(view, "translationX", 100f).apply {
+            duration = 1000
+            addListener(object: AnimatorListenerAdapter() {
+                override fun onAnimationStart(animation: Animator?) {
+                    // Called when the animation starts.
+                    super.onAnimationStart(animation)
+                }
+
+                override fun onAnimationEnd(animation: Animator?) {
+                    // Called when the animation ends.
+                    super.onAnimationEnd(animation)
+                }
+
+                override fun onAnimationRepeat(animation: Animator?) {
+                    // Called when the animation repeats itself.
+                    super.onAnimationRepeat(animation)
+                }
+
+                override fun onAnimationCancel(animation: Animator?) {
+                    // Called when the animation is canceled.
+                    // A cancelled animation also calls onAnimationEnd(),
+                    // regardless of how they were ended.
+                    super.onAnimationCancel(animation)
+                }
+            })
             start()
         }
     }
