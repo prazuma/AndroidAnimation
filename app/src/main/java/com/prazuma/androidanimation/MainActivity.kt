@@ -20,5 +20,9 @@ class MainActivity : AppCompatActivity() {
         main_layout_transition_button.setOnClickListener {
             startActivity(Intent(this, LayoutTransitionActivity::class.java))
         }
+
+        main_state_list_animator_button.setOnClickListener {
+            startActivity(Intent(this, StateListAnimatorActivity::class.java))
+        }
     }
 }

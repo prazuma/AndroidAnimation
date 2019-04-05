@@ -11,8 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".PropertyAnimationActivity"
-            android:label="PROPERTY ANIMATION"/>
+        <activity android:name=".StateListAnimatorActivity"></activity>
+        <activity
+            android:name=".PropertyAnimationActivity"
+            android:label="PROPERTY ANIMATION" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,8 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LayoutTransitionActivity"
-            android:label="LAYOUT TRANSITION"/>
+        <activity
+            android:name=".LayoutTransitionActivity"
+            android:label="LAYOUT TRANSITION" />
     </application>
 
 </manifest>
