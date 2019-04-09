@@ -24,5 +24,9 @@ class MainActivity : AppCompatActivity() {
         main_state_list_animator_button.setOnClickListener {
             startActivity(Intent(this, StateListAnimatorActivity::class.java))
         }
+
+        main_animations_with_interpolator_button.setOnClickListener {
+            startActivity(Intent(this, AnimationsWithInterpolatorActivity::class.java))
+        }
     }
 }

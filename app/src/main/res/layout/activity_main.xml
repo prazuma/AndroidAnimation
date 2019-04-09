@@ -33,4 +33,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/main_layout_transition_button" />
 
+    <Button
+        android:id="@+id/main_animations_with_interpolator_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ANIMATION WITH INTERPOLATOR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_state_list_animator_button" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
